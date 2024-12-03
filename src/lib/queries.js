@@ -16,6 +16,38 @@ export const GET_POSTS = gql`
     }
   }
 `;
+export const GET_POSTSToday = gql`
+query MyQuery {
+  progetti(where: {id: "cm2kk8clmkobm07l6qhrydbxa"}) {
+    nome
+   galleria(first: 100){
+      url
+    }
+  }
+}
+`;
+
+export const GET_POSTSRussia = gql`
+query MyQuery {
+  progetti(where: {id: "cm3jci1bv5wfp07mv8oglvn8t"}) {
+    nome
+   galleria(first: 100){
+      url
+    }
+  }
+}
+`;
+
+export const GET_POSTSDailyDose = gql`
+query MyQuery {
+  progetti(where: {id: "cm3jct37h5xvj07mv04uslila"}) {
+    nome
+   galleria(first: 100){
+      url
+    }
+  }
+}
+`;
 
 export const GET_POSTSHome = gql`
   query {
