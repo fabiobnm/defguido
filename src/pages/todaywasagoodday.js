@@ -2,13 +2,13 @@ import { useState } from 'react';
 import Modal from 'react-modal'; // Importa React Modal
 import { useQuery } from '@apollo/client';
 import client from '../lib/apolloClient';
-import { GET_POSTSDailyDose } from '../lib/queries';
+import { GET_POSTSToday } from '../lib/queries';
 import Sidebartest from '../components/Sidebartest';
 
 Modal.setAppElement('#__next'); // Indica il nodo principale della tua app
 
 export default function Home() {
-  const { loading, error, data } = useQuery(GET_POSTSDailyDose, { client });
+  const { loading, error, data } = useQuery(GET_POSTSToday, { client });
 
   const [isModalOpen, setIsModalOpen] = useState(false); // Stato per il Modal
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Stato per l'immagine corrente
